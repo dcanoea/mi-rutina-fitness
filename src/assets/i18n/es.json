@@ -13,5 +13,9 @@
   "ROUTINE_ADDED": "Rutina añadida correctamente",
   "ROUTINE_DELETED": "Rutina eliminada correctamente",
   "ERROR": "Error",
-  "DELETE": "Eliminar"
+  "DELETE": "Eliminar",
+  "TAB3_TITLE": "Configuración",
+  "USER_NAME": "Nombre de usuario",
+  "ENTER_USER_NAME": "Ingresa tu nombre",
+  "DARK_THEME": "Tema oscuro"
 }

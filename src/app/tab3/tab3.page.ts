@@ -23,6 +23,10 @@ export class Tab3Page {
   ) {}
 
   async ionViewWillEnter() {
+    await this.cargarConfiguracion();
+  }
+
+  private async cargarConfiguracion() {
     this.nombreUsuario = await this.configuracionService.obtenerNombreUsuario();
     this.temaOscuro = await this.configuracionService.obtenerTemaOscuro();
     this.idioma = await this.configuracionService.obtenerIdioma();
@@ -32,8 +36,9 @@ export class Tab3Page {
     await this.configuracionService.cambiarNombreUsuario(this.nombreUsuario);
   }
 
-  async guardarTemaOscuro() {
-    await this.configuracionService.cambiarTemaOscuro(this.temaOscuro);
+  async cambiarTema(event: any) {
+    const activado = event.detail.checked;
+    await this.configuracionService.cambiarTemaOscuro(activado);
   }
 
   async cambiarIdioma(event: any) {

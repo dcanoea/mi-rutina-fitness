@@ -39,12 +39,12 @@
       </ion-select>
     </ion-item>
 
-    <!-- Selector de tema -->
+    <!-- Selector de tema oscuro -->
     <ion-item>
       <ion-label>{{ "DARK_THEME" | translate }}</ion-label>
       <ion-toggle 
-        [(ngModel)]="temaOscuro" 
-        (ionChange)="guardarTemaOscuro()">
+        [checked]="temaOscuro" 
+        (ionChange)="cambiarTema($event)">
       </ion-toggle>
     </ion-item>
   </ion-list>

@@ -1,0 +1,7 @@
+{
+  "name": "mi-rutina-fitness",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

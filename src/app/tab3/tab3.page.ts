@@ -11,6 +11,11 @@ import { TranslateService } from '@ngx-translate/core';
 export class Tab3Page {
   nombreUsuario: string = '';
   temaOscuro: boolean = false;
+  idioma: string = 'es';
+  idiomasDisponibles = [
+    { codigo: 'es', nombre: 'Español' },
+    { codigo: 'en', nombre: 'English' }
+  ];
 
   constructor(
     private configuracionService: ConfiguracionService,
@@ -20,6 +25,7 @@ export class Tab3Page {
   async ionViewWillEnter() {
     this.nombreUsuario = await this.configuracionService.obtenerNombreUsuario();
     this.temaOscuro = await this.configuracionService.obtenerTemaOscuro();
+    this.idioma = await this.configuracionService.obtenerIdioma();
   }
 
   async guardarNombreUsuario() {
@@ -28,5 +34,10 @@ export class Tab3Page {
 
   async guardarTemaOscuro() {
     await this.configuracionService.cambiarTemaOscuro(this.temaOscuro);
+  }
+
+  async cambiarIdioma(event: any) {
+    const idiomaSeleccionado = event.detail.value;
+    await this.configuracionService.cambiarIdioma(idiomaSeleccionado);
   }
 }

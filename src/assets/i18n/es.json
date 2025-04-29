@@ -14,8 +14,9 @@
   "ROUTINE_DELETED": "Rutina eliminada correctamente",
   "ERROR": "Error",
   "DELETE": "Eliminar",
-  "TAB3_TITLE": "Configuración",
-  "USER_NAME": "Nombre de usuario",
   "ENTER_USER_NAME": "Ingresa tu nombre",
-  "DARK_THEME": "Tema oscuro"
+  "LANGUAGE": "Idioma",
+  "CANCEL": "Cancelar",
+  "ACCEPT": "Aceptar",
+  "LANGUAGE_CHANGED": "Idioma cambiado correctamente"
 }

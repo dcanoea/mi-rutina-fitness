@@ -5,7 +5,7 @@ import { ConfiguracionService } from './services/configuracion.service';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  standalone:false,
+  standalone: false,
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
@@ -14,9 +14,12 @@ export class AppComponent {
     private configuracionService: ConfiguracionService
   ) {
     this.translate.setDefaultLang('es');
-    this.translate.use('es');
-    this.configuracionService.obtenerTemaOscuro().then(tema => {
-      document.body.classList.toggle('dark', tema);
-    });
+    this.inicializarConfiguracion();
+  }
+
+  async inicializarConfiguracion() {
+    // Cargar configuración al iniciar la app
+    const idioma = await this.configuracionService.obtenerIdioma();
+    this.translate.use(idioma || 'es');
   }
 }

@@ -25,6 +25,20 @@
       </ion-input>
     </ion-item>
 
+    <!-- Selector de idioma -->
+    <ion-item>
+      <ion-label>{{ "LANGUAGE" | translate }}</ion-label>
+      <ion-select 
+        [value]="idioma" 
+        (ionChange)="cambiarIdioma($event)" 
+        [cancelText]="'CANCEL' | translate" 
+        [okText]="'ACCEPT' | translate">
+        <ion-select-option *ngFor="let idioma of idiomasDisponibles" [value]="idioma.codigo">
+          {{ idioma.nombre }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
     <!-- Selector de tema -->
     <ion-item>
       <ion-label>{{ "DARK_THEME" | translate }}</ion-label>

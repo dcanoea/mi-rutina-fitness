@@ -1,0 +1,13 @@
+ion-select {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  
+  ion-select::part(icon) {
+    color: var(--ion-color-primary);
+  }
+  
+  ion-select::part(placeholder),
+  ion-select::part(text) {
+    flex: 0 0 auto;
+  }

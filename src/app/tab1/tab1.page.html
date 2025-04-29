@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      {{ "TAB1_TITLE" | translate }} <!-- "TAB1_TITLE" -> reemplazar con el ID asignado en los ficheros de traducciones -->
+      {{ "TAB1_TITLE" | translate }}
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,5 +13,27 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="{{ 'TAB1_TITLE' | translate }}"></app-explore-container>
+  <ion-list>
+    <ion-item-sliding *ngFor="let rutina of rutinas">
+      <ion-item (click)="marcarCompletado(rutina.id)">
+        <ion-checkbox slot="start" [checked]="rutina.completado"></ion-checkbox>
+        
+        <ion-thumbnail slot="start" *ngIf="rutina.imagen">
+          <img [src]="rutina.imagen" alt="Imagen de la rutina">
+        </ion-thumbnail>
+        
+        <ion-label>
+          <h2>{{ rutina.nombre }}</h2>
+          <p>{{ "REPETITIONS" | translate }}: {{ rutina.repeticiones }}</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item-options>
+        <ion-item-option color="danger" (click)="eliminarRutina(rutina.id)">
+          <ion-icon name="trash"></ion-icon>
+          {{ "DELETE" | translate }}
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
 </ion-content>

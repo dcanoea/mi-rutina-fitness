@@ -1,17 +1,51 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      {{ "TAB2_TITLE" | translate }} <!-- "TAB2_TITLE" -> reemplazar con el ID asignado en los ficheros de traducciones -->
+      {{ "TAB2_TITLE" | translate }}
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="ion-padding">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">{{ "TAB2_TITLE" | translate }}</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="{{ 'TAB2_TITLE' | translate }}"></app-explore-container>
+  <form [formGroup]="rutinaForm" (ngSubmit)="agregarRutina()">
+    <ion-item>
+      <ion-input 
+        formControlName="nombre" 
+        [placeholder]="'ROUTINE_NAME' | translate">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input 
+        formControlName="repeticiones" 
+        type="number" 
+        [placeholder]="'REPETITIONS' | translate">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-button expand="block" (click)="seleccionarImagen()">
+        {{ "SELECT_IMAGE" | translate }}
+      </ion-button>
+    </ion-item>
+    
+    <ion-item *ngIf="imagen">
+      <ion-thumbnail slot="start">
+        <img [src]="imagen" alt="Imagen de la rutina">
+      </ion-thumbnail>
+    </ion-item>
+
+    <ion-button 
+      expand="block" 
+      type="submit" 
+      [disabled]="rutinaForm.invalid">
+      {{ "ADD_ROUTINE" | translate }}
+    </ion-button>
+  </form>
 </ion-content>

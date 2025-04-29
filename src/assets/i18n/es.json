@@ -1,5 +1,17 @@
 {
-    "TAB1_TITLE": "RUTINA FITNESS",
-    "TAB2_TITLE": "AÑADIR RUTINA",
-    "TAB3_TITLE": "AJUSTES"
+  "TAB1_TITLE": "Rutinas",
+  "TAB2_TITLE": "Añadir Rutina",
+  "TAB3_TITLE": "Configuración",
+  "ROUTINE_NAME": "Nombre de la rutina",
+  "REPETITIONS": "Repeticiones",
+  "SELECT_IMAGE": "Seleccionar Imagen",
+  "ADD_ROUTINE": "Añadir Rutina",
+  "USER_NAME": "Nombre de Usuario",
+  "DARK_THEME": "Tema Oscuro",
+  "LOADING": "Cargando...",
+  "SAVING": "Guardando...",
+  "ROUTINE_ADDED": "Rutina añadida correctamente",
+  "ROUTINE_DELETED": "Rutina eliminada correctamente",
+  "ERROR": "Error",
+  "DELETE": "Eliminar"
 }

@@ -1,5 +1,17 @@
 {
-    "TAB1_TITLE": "FITNESS ROUTINE",
-    "TAB2_TITLE": "ADD ROUTINE",
-    "TAB3_TITLE": "SETTINGS"
-}
+    "TAB1_TITLE": "Routines",
+    "TAB2_TITLE": "Add Routine",
+    "TAB3_TITLE": "Settings",
+    "ROUTINE_NAME": "Routine name",
+    "REPETITIONS": "Repetitions",
+    "SELECT_IMAGE": "Select Image",
+    "ADD_ROUTINE": "Add Routine",
+    "USER_NAME": "User Name",
+    "DARK_THEME": "Dark Theme",
+    "LOADING": "Loading...",
+    "SAVING": "Saving...",
+    "ROUTINE_ADDED": "Routine added successfully",
+    "ROUTINE_DELETED": "Routine deleted successfully",
+    "ERROR": "Error",
+    "DELETE": "Delete"
+  }
